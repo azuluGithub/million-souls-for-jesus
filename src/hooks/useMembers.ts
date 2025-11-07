@@ -28,8 +28,16 @@ export const useMembers = (includeDeleted = false) => {
       } else {
         // Seed with initial data
         const initialMembers: Member[] = [
-          { id: "1", name: "Star Arnold", phone: "0737368007", address: "2100 Soweto", joined_date: "2024-01-15", is_active: true },
-          { id: "2", name: "Arnold Zulu", phone: "0814099783", address: "1351", joined_date: "2024-02-20", is_active: true },
+          { id: "1", name: "Sibongile Sikhosana", phone: "0754813435", address: "22 Ngwenya Str", joined_date: "2025-08-15", is_active: true },
+          { id: "2", name: "Busisiwe Ndlovu", phone: "0819373825", address: "383 Ncwana Str", joined_date: "2025-08-15", is_active: true },
+          { id: "3", name: "Lungile Khumalo", phone: "0617534272", address: "143 Ndlovu Str", joined_date: "2025-08-15", is_active: true },
+          { id: "4", name: "Lindiwe Sibanyoni", phone: "0710864675", address: "48 Masina Str", joined_date: "2025-08-15", is_active: true },
+          { id: "5", name: "Dorothy Kubheka", phone: "07823457423", address: "501 Monyane Str", joined_date: "2025-08-15", is_active: true },
+          { id: "6", name: "Eva Mkhize", phone: "0819075357", address: "66 Lehoasa Str", joined_date: "2025-08-15", is_active: true },
+          { id: "7", name: "Victoria Sikhakhane", phone: "0673357367", address: "1245 Masina Str", joined_date: "2025-08-15", is_active: true },
+          { id: "8", name: "Palesa Hlatshwayo", phone: "0653267786", address: "667 Ncwana Str", joined_date: "2025-08-15", is_active: true },
+          { id: "9", name: "Thabile Khoza", phone: "0762121345", address: "99 Masina Str", joined_date: "2025-08-15", is_active: true },
+          { id: "10", name: "Agnes Mabaso", phone: "0818908643", address: "462 Ndlovu Str", joined_date: "2025-08-15", is_active: true },
         ];
         localStorage.setItem(STORAGE_KEY, JSON.stringify(initialMembers));
         setMembers(includeDeleted ? [] : initialMembers);

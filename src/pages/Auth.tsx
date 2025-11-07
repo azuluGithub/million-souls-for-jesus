@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Shield } from "lucide-react";
 import { toast } from "sonner";
 import logo from "@/assets/logo.png";
@@ -17,10 +23,11 @@ export default function Auth() {
   const [isLoading, setIsLoading] = useState(false);
 
   // Redirect if already logged in
-  if (currentAdmin) {
-    navigate("/dashboard");
-    return null;
-  }
+  useEffect(() => {
+    if (currentAdmin) {
+      navigate("/dashboard");
+    }
+  }, [currentAdmin, navigate]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,7 +35,7 @@ export default function Auth() {
 
     try {
       const success = login(email, password);
-      
+
       if (success) {
         toast.success("Welcome back!");
         navigate("/dashboard");
@@ -57,7 +64,7 @@ export default function Auth() {
           <div>
             <CardTitle className="text-2xl font-bold">Admin Access Only</CardTitle>
             <CardDescription>
-              Sign in to access the VeggieTrack Dashboard
+              Sign in to access the Million Souls For Jesus Dashboard
             </CardDescription>
           </div>
         </CardHeader>
@@ -68,7 +75,7 @@ export default function Auth() {
               <Input
                 id="email"
                 type="email"
-                placeholder="admin@veggietrack.com"
+                placeholder="admin@gmail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -91,10 +98,10 @@ export default function Auth() {
               {isLoading ? "Signing in..." : "Sign In"}
             </Button>
           </form>
-          
+
           <div className="mt-6 p-3 bg-muted rounded-md">
             <p className="text-xs text-muted-foreground text-center">
-              Demo credentials: zinhle@stokvel.com / admin123
+              Demo credentials: test@gmail.com / test123
             </p>
           </div>
         </CardContent>

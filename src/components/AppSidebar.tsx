@@ -55,8 +55,8 @@ export function AppSidebar() {
             <img src={logo} alt="VeggieTrack" className="w-10 h-10 rounded" />
             {state === "expanded" && (
               <div>
-                <h2 className="text-lg font-bold text-sidebar-foreground">VeggieTrack</h2>
-                <p className="text-xs text-sidebar-foreground/80">Collection Manager</p>
+                <h2 className="text-lg font-bold text-sidebar-foreground">M.S.F.J</h2>
+                <p className="text-xs text-sidebar-foreground/80">Food Rescure Project</p>
               </div>
             )}
           </div>

@@ -17,18 +17,18 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-// Mock admin data
+// Demo admin credentials
 const mockAdmin: Admin = {
   id: '1',
-  name: 'Zinhle',
-  surname: 'Mokoena',
-  email: 'zinhle@stokvel.com',
+  name: 'Star',
+  surname: 'Arnold',
+  email: 'test@gmail.com',
   role: 'super_admin',
-  password: 'admin123'
+  password: 'test123'
 };
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [currentAdmin, setCurrentAdmin] = useState<Admin | null>(mockAdmin);
+  const [currentAdmin, setCurrentAdmin] = useState<Admin | null>(null);
 
   const login = (email: string, password: string) => {
     if (email === mockAdmin.email && password === mockAdmin.password) {

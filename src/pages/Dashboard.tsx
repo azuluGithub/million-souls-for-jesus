@@ -64,11 +64,11 @@ export default function Dashboard() {
   };
 
   return (
-    <DashboardLayout title="VeggieTrack Dashboard">
+    <DashboardLayout title="Million Souls For Jesus - Dashboard">
       <div className="space-y-6">
         <div>
           <h2 className="text-3xl font-bold mb-2">Dashboard</h2>
-          <p className="text-muted-foreground">Welcome to VeggieTrack - Track your vegetable collections</p>
+          <p className="text-muted-foreground">Welcome to Million Souls For Jesus - Track your vegetable collections</p>
         </div>
 
         {/* Stats Cards */}

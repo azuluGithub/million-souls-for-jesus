@@ -42,43 +42,43 @@ export default function Admins() {
       const mockAdmins: Admin[] = [
         {
           id: '1',
-          name: 'Zinhle',
-          surname: 'Mokoena',
-          email: 'zinhle@stokvel.com',
+          name: 'Lesego',
+          surname: 'L',
+          email: 'lesego@gmail.com',
           role: 'super_admin',
-          password: 'admin123'
+          password: 'test123'
         },
         {
           id: '2',
-          name: 'Thabo',
-          surname: 'Ndlovu',
-          email: 'thabo@stokvel.com',
+          name: 'Palesa',
+          surname: 'P',
+          email: 'palesa@gmail.com',
           role: 'admin',
-          password: 'admin123'
+          password: 'test123'
         },
         {
           id: '3',
-          name: 'Lerato',
-          surname: 'Dlamini',
-          email: 'lerato@stokvel.com',
+          name: 'Nonyameko',
+          surname: 'N',
+          email: 'nonyameko@gmail.com',
           role: 'moderator',
-          password: 'admin123'
+          password: 'test123'
         },
         {
           id: '4',
-          name: 'Sipho',
-          surname: 'Khumalo',
-          email: 'sipho@stokvel.com',
+          name: 'Naledi',
+          surname: 'N',
+          email: 'naledi@gmail.com',
           role: 'admin',
-          password: 'admin123'
+          password: 'test123'
         },
         {
           id: '5',
-          name: 'Nomsa',
-          surname: 'Zungu',
-          email: 'nomsa@stokvel.com',
+          name: 'Khensani',
+          surname: 'K',
+          email: 'khensani@gmail.com',
           role: 'moderator',
-          password: 'admin123'
+          password: 'test123'
         }
       ];
       localStorage.setItem('admins', JSON.stringify(mockAdmins));

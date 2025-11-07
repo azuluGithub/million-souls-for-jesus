@@ -39,10 +39,10 @@ interface Collection {
 const generateMockData = (): Collection[] => {
   const members = [
     { name: "Star Arnold", phone: "0737368007" },
-    { name: "Arnold Zulu", phone: "0814099783" },
+    { name: "Menzi N", phone: "0814099783" },
     { name: "John Doe", phone: "0711223344" },
-    { name: "Jane Smith", phone: "0722334455" },
-    { name: "Mike Johnson", phone: "0733445566" },
+    { name: "Jane Khumalo", phone: "0722334455" },
+    { name: "Minnie D", phone: "0733445566" },
   ];
   
   const collections: Collection[] = [];
@@ -201,7 +201,7 @@ export default function History() {
     // Add signature line
     const finalY = (doc as any).lastAutoTable.finalY || 30;
     doc.setFontSize(10);
-    doc.text("Name and Signature of Moderator: _______________", 14, finalY + 20);
+    doc.text("Name and Signature of Moderator: __________________________", 14, finalY + 20);
     
     // Save the PDF
     doc.save(`collections_${selectedDate}.pdf`);
@@ -289,7 +289,7 @@ export default function History() {
             </tbody>
           </table>
           <div class="signature">
-            <p style="font-size: 14px; color: #333;">Name and Signature of Moderator: _______________</p>
+            <p style="font-size: 14px; color: #333;">Name and Signature of Moderator: _______________________</p>
           </div>
           <script>window.print();</script>
         </body>
